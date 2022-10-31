@@ -1,0 +1,33 @@
+#pragma version 2
+txn Fee
+int 1000
+<
+txn TypeEnum
+int pay
+==
+txn CloseRemainderTo
+global ZeroAddress
+==
+&&
+txn RekeyTo
+global ZeroAddress
+==
+&&
+&&
+txn Receiver
+addr ""
+==
+arg 0
+sha256
+byte base32(2323232323232323)
+==
+&&
+txn Receiver
+addr ""
+==
+txn FirstValid
+int 1000
+>
+&&
+||
+&&
